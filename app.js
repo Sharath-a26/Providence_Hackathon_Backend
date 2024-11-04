@@ -386,6 +386,8 @@ async function getDietForDay(clientConnection, patientid, date) {
 
 app.post('/post/daydietlog', function getdaylogs(req,res) {
   connectionPool.use(async (clientConnection) => {
+
+    console.log("Hitting server");
     const {patientid, date} = req.body;
 
     let data1 = await getDietForDay(clientConnection, patientid, date);
