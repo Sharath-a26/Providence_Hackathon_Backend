@@ -384,6 +384,12 @@ async function getDietForDay(clientConnection, patientid, date) {
   })
 }
 
+app.post('/post/hello', function hello(req,res) {
+  console.log("hello");
+  res.send("hello");
+  
+})
+
 app.post('/post/daydietlog', function getdaylogs(req,res) {
   connectionPool.use(async (clientConnection) => {
 
